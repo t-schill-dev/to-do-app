@@ -1,7 +1,8 @@
 // Button events
+$('form').on('submit', e => e.preventDefault());
 $('#button').on('click', newItem);
-$('#button').keypress((e) => {
-    if (e === "Return") {
+$('input').keypress((e) => {
+    if (e.key === "Enter") {
         return newItem();
     } else {
         return;
@@ -43,6 +44,7 @@ function newItem() {
     $('#list').sortable();
 
     //Deletes input after creating li item
+
     $('#input').val(null);
 
 }
