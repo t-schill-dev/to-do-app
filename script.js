@@ -32,6 +32,6 @@ function newItem() {
     // 4. Sort items
     $('#list').sortable();
 
-    $('#input').empty(inputValue);
+    $('#input').val(null);
 
 }
