@@ -1,3 +1,13 @@
+// Button events
+$('#button').on('click', newItem);
+$('#button').keypress((e) => {
+    if (e === "Return") {
+        return newItem();
+    } else {
+        return;
+    }
+});
+
 function newItem() {
     // 1. Adding a new item to the list of items
 
@@ -32,6 +42,7 @@ function newItem() {
     // 4. Sort items
     $('#list').sortable();
 
+    //Deletes input after creating li item
     $('#input').val(null);
 
 }
